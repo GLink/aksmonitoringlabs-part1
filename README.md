@@ -2,6 +2,17 @@
 
 Welcome to the Azure Kubernetes Service (AKS) Monitoring and Observability Lab! This comprehensive lab will guide you through essential monitoring techniques, metrics collection, alerting strategies, and cost optimization for AKS clusters using Azure-native and cloud-native tools.
 
+## 🐚 Choose Your Shell
+
+This lab is available in two versions:
+
+| Version | Description | Path |
+|---------|-------------|------|
+| **Bash** | Original labs using Bash/Linux shell syntax | Root chapter folders |
+| **PowerShell** | Labs converted to PowerShell syntax | [`./psversion/`](./psversion/) folder |
+
+> **PowerShell users**: Use the links in the **PowerShell Version** column below, or navigate directly to the [`psversion`](./psversion/) folder.
+
 ## 🎯 Learning Objectives
 
 By completing this lab, you will gain hands-on experience with:
@@ -16,40 +27,51 @@ By completing this lab, you will gain hands-on experience with:
 
 This lab is organized into the following chapters:
 
-- **[Chapter 0: Setup and Prerequisites](chapter-0-setup/README.md)**
+| Chapter | Topic | Bash Version | PowerShell Version |
+|---------|-------|--------------|-------------------|
+| 0 | Setup and Prerequisites | [Bash](./chapter-0-setup/README.md) | [PowerShell](./psversion/chapter-0-setup/README.md) |
+| 1 | Azure Monitor + Container Insights | [Bash](./chapter-1-azure-monitor/README.md) | [PowerShell](./psversion/chapter-1-azure-monitor/README.md) |
+| 2 | Azure Managed Prometheus + Grafana | [Bash](./chapter-2-prometheus-grafana/README.md) | [PowerShell](./psversion/chapter-2-prometheus-grafana/README.md) |
+| 3 | PromQL Basics + Alerting | [Bash](./chapter-3-promql-alerting/README.md) | [PowerShell](./psversion/chapter-3-promql-alerting/README.md) |
+| 4 | Metrics Collection & Visualization | [Bash](./chapter-4-metrics-comparison/README.md) | [PowerShell](./psversion/chapter-4-metrics-comparison/README.md) |
+| 5 | Cost Optimization for Metrics Ingestion | [Bash](./chapter-5-cost-optimization/README.md) | [PowerShell](./psversion/chapter-5-cost-optimization/README.md) |
+
+### Chapter Details
+
+- **Chapter 0: Setup and Prerequisites**
   - Setting your student initials
   - Creating resource group and AKS cluster
   - Installing required tools
   - Deploying sample applications
 
-- **[Chapter 1: Azure Monitor + Container Insights](chapter-1-azure-monitor/README.md)**
+- **Chapter 1: Azure Monitor + Container Insights**
   - Connecting AKS to Log Analytics Workspace
   - Enabling Container Insights
   - Understanding Activity Logs and Diagnostic Settings
   - Finding node CPU pressure, pod restarts, and OOMKills
   - Creating a crashloop scenario and observing signals
 
-- **[Chapter 2: Azure Managed Prometheus + Grafana](chapter-2-prometheus-grafana/README.md)**
+- **Chapter 2: Azure Managed Prometheus + Grafana**
   - Enabling Azure Managed Prometheus
   - Connecting to Azure Managed Grafana
   - Importing pre-built dashboards
   - Understanding core Prometheus metrics
   - Exploring node_cpu_seconds_total and container_memory_working_set_bytes
 
-- **[Chapter 3: PromQL Basics + Alerting](chapter-3-promql-alerting/README.md)**
+- **Chapter 3: PromQL Basics + Alerting**
   - Writing PromQL queries for CPU throttling and memory pressure
   - Querying pod availability metrics
   - Creating meaningful alerts (e.g., "Pod down for 5 minutes")
   - Triggering alerts intentionally
   - Understanding alerting best practices
 
-- **[Chapter 4: Metrics Collection & Visualization](chapter-4-metrics-comparison/README.md)**
+- **Chapter 4: Metrics Collection & Visualization**
   - Understanding platform metrics vs. Prometheus metrics
   - Comparing Azure Monitor CPU % with Prometheus CPU metrics
   - Discussing sampling, granularity, and data freshness
   - Choosing the right metric for the right use case
 
-- **[Chapter 5: Cost Optimization for Metrics Ingestion](chapter-5-cost-optimization/README.md)**
+- **Chapter 5: Cost Optimization for Metrics Ingestion**
   - Identifying top 5 most expensive metrics
   - Adjusting scrape intervals and retention policies
   - Calculating cost before and after optimization
